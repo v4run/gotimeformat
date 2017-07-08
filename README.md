@@ -57,7 +57,7 @@ Add this to your `keybinding.json` file.
 [Github](https://github.com/v4run/gotimeformat)
 
 ## Marketplace
-[Transpose](https://marketplace.visualstudio.com/items?itemName=v4run.gotimeformat)
+[gotimeformat](https://marketplace.visualstudio.com/items?itemName=v4run.gotimeformat)
 
 ## Release Notes
 
