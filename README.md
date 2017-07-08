@@ -1,6 +1,6 @@
 # gotimeformat
 
-*gotimerformat* is a plugin for Visual Studio Code to generate go time layout from
+*gotimeformat* is a plugin for Visual Studio Code to generate go time layout from
 a simple easy to remember format.
 
 ## Demo
