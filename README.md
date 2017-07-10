@@ -8,7 +8,7 @@ a simple easy to remember format.
 ![demo](./demo.gif)
 
 ## Layout
-|timeformat|default|
+timeformat|default
 ----|----
 YYYY|2006
 YY|06
@@ -64,3 +64,7 @@ Add this to your `keybinding.json` file.
 ### 1.0.0
 
 Initial release of *gotimeformat*
+
+### 1.0.1
+
+Fix for [Bug 1](https://github.com/v4run/gotimeformat/issues/1) Extension now works for multiple selections.

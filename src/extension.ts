@@ -1,9 +1,9 @@
 'use strict';
-import {window, ExtensionContext, commands, TextEditor, TextEditorEdit, Selection} from 'vscode';
+import {ExtensionContext, commands, TextEditor, TextEditorEdit} from 'vscode';
 
 export function activate(context : ExtensionContext) {
-    let disposable = commands.registerCommand('generategotimelayout', () => {
-        parseSelection();
+    let disposable = commands.registerTextEditorCommand('generategotimelayout', (textEditor : TextEditor, textEditorEdit : TextEditorEdit) => {
+        parseSelection(textEditor, textEditorEdit);
     });
     context.subscriptions.push(disposable);
 }
@@ -62,14 +62,9 @@ export function generateLayout(text : String) {
  * parseSelection parses the selections in the editor and replaces them with the
  * go time format.
  */
-function parseSelection() {
-    const selections = window.activeTextEditor.selections;
-    const doc = window.activeTextEditor.document;
-    selections.forEach(s => {
-        if (doc.validateRange(s)) {
-            window
-                .activeTextEditor
-                .edit(builder => builder.replace(s, generateLayout(doc.getText(s))));
-        }
-    });
+function parseSelection(textEditor : TextEditor, textEditorEdit : TextEditorEdit) {
+    const doc = textEditor.document;
+    textEditor.selections.forEach(s => {
+        doc.validateRange(s) && textEditorEdit.replace(s, generateLayout(doc.getText(s)));
+    })
 }
