@@ -1,43 +1,40 @@
 {
-    "name": "gotimeformat",
-    "displayName": "GoTimeFormat",
-    "description": "Generate golang time layout from a simple easy to remember custom layout",
-    "version": "1.0.1",
-    "publisher": "v4run",
-    "engines": {
-        "vscode": "^1.13.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:generategotimelayout"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "generategotimelayout",
-                "title": "Go: Generate time layout"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "pkgvars": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/v4run/gotimeformat.git"
-    }
+  "name": "gotimeformat",
+  "displayName": "GoTimeFormat",
+  "description": "Generate golang time layout from a simple easy to remember custom layout",
+  "version": "1.0.1",
+  "publisher": "v4run",
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:generategotimelayout"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "generategotimelayout",
+        "title": "Go: Generate time layout"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.42",
+    "@types/vscode": "^1.13.0",
+    "@vscode/test-electron": "^2.1.4",
+    "typescript": "^4.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v4run/gotimeformat.git"
+  }
 }
