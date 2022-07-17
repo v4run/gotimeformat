@@ -2,7 +2,7 @@
   "name": "gotimeformat",
   "displayName": "GoTimeFormat",
   "description": "Generate golang time layout from a simple easy to remember custom layout",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "publisher": "v4run",
   "engines": {
     "vscode": "^1.13.0"
